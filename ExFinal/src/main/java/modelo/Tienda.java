@@ -18,13 +18,15 @@ public class Tienda {
     private ProductoArreglo productos;
     private CategoriaArreglo categorias;
     private PersonaArreglo personas;
+    private VentaArreglo ventas;
+   
 
-
-    Tienda(int tamPersonas, int tamProductos, int tamCategorias) {
+    Tienda(int tamPersonas, int tamProductos, int tamCategorias, int tamVentas) {
         personas = new PersonaArreglo(tamPersonas);
         productos = new ProductoArreglo(tamProductos);
         categorias = new CategoriaArreglo(tamCategorias);
-    }
+        ventas = new VentaArreglo(tamVentas);
+            }
 
     public void agregarCliente(Cliente c) {
         personas.agregarPersona(c);
@@ -52,4 +54,9 @@ public class Tienda {
         
         return null;
     }
-}
+    public VentaArreglo getVentas() {
+        return ventas;
+    }
+    }
+    
+
