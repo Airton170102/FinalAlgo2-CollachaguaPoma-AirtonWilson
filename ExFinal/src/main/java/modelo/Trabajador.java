@@ -4,28 +4,47 @@
  */
 package modelo;
 
+import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 /**
  *
  * @author airto
  */
 public class Trabajador extends Persona {
+
+    /**
+     *
+     * @param text
+     * @param text0
+     * @return
+     */
+    public static Trabajador validar(String text, String text0) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     String password;
     String email;
     static ArrayList<Trabajador> trabajadores = new ArrayList<>();
 
-    public Trabajador(String nombre, String numDocumento, String email, String password) {
-        this.nombre = nombre;
-        this.numDocumento = numDocumento;
-        this.email = email;
+    public Trabajador(String password, String email, String nombre, String paterno, String materno, Date nacimiento, String numDocumento) {
+        super(nombre, paterno, materno, nacimiento, numDocumento);
         this.password = password;
+        this.email = email;
     }
 
     public static void crearTrabajadores() {
-        trabajadores.add(new Trabajador("Juan Pepe", "0000001", "jperez@hotmail.com", "12345678"));
-        trabajadores.add(new Trabajador("Juan Diego", "0000002", "jdiego@hotmail.com", "12345678"));
-        trabajadores.add(new Trabajador("Juan Moises", "0000003", "jmoises@hotmail.com", "12345678"));
+       SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+
+        try {
+            Date fechaNacimiento = formatoFecha.parse("01/01/1980"); // Fecha de nacimiento por ejemplo
+            trabajadores.add(new Trabajador("12345678", "jperez@hotmail.com", "Juan", "Diaz", "Flores", fechaNacimiento, "0000001"));
+            trabajadores.add(new Trabajador("12345678", "jdiego@hotmail.com", "Juan", "Jose", "Moreno", fechaNacimiento, "0000002"));
+            trabajadores.add(new Trabajador("12345678", "jmoises@hotmail.com", "Juan", "Moises", "Rosales", fechaNacimiento, "0000003"));
+        } catch (ParseException e) {
+            System.out.println("Error al parsear la fecha");
+        }
     }
     public boolean ingresar(String email, String password) {
         if(this.email.equals(email) && this.password.equals(password)) {
@@ -43,4 +62,6 @@ public class Trabajador extends Persona {
              
         return false;       
     }
+
 }
+    

@@ -12,9 +12,9 @@ import java.util.Date;
  */
 public class Persona {
     String nombre;
-    private String paterno;
-    private String materno;
-    private Date nacimiento;
+    String paterno;
+    String materno;
+    Date nacimiento;
     String numDocumento;
 
     public Persona(String nombre, String paterno, String materno, Date nacimiento, String numDocumento) {
@@ -63,6 +63,14 @@ public class Persona {
 
     public void setNumDocumento(String numDocumento) {
         this.numDocumento = numDocumento;
+    }
+
+    Object getEmail() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    Object getPassword() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

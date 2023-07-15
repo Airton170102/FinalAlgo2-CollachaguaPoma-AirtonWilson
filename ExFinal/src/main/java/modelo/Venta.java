@@ -28,8 +28,13 @@ public class Venta {
     }
 
     public boolean eliminarProducto(Producto p, int cantidad) {
-        // implementar lógica
-        return true;
+       for (Detalle detalle : detalles) {
+        if (detalle.producto.equals(p)) {
+            detalles.remove(detalle);
+            return true;
+        }
+      }
+        return false;
     }
 
     public float validarCarrito() {

@@ -4,6 +4,8 @@
  */
 package modelo;
 
+import java.util.Date;
+
 /**
  *
  * @author airto
@@ -11,6 +13,10 @@ package modelo;
 public class Cliente extends Persona {
     private int celular;
     private float dinero;
+
+    public Cliente(String nombre, String paterno, String materno, Date nacimiento, String numDocumento) {
+        super(nombre, paterno, materno, nacimiento, numDocumento);
+    }
 
     public boolean pagar() {
    
