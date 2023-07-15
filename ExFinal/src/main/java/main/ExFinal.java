@@ -5,6 +5,9 @@
 
 package main;
 
+import controlador.ControladorLogin;
+import vista.login1;
+
 /**
  *
  * @author airto
@@ -12,6 +15,7 @@ package main;
 public class ExFinal {
 
     public static void main(String[] args) {
-     
+        ControladorLogin controlador = new ControladorLogin(login1);
+        controlador.iniciar();
     }
 }

@@ -52,5 +52,6 @@ public class ControladorLogin {
     
     public void limpiarControles(){
         vista.txtClave.setText("");
+        vista.txtUsuario.setText("");
     }
 }

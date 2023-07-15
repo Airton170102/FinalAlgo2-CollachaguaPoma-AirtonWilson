@@ -31,7 +31,7 @@ public class ControladorPrincipal {
             public void actionPerformed(ActionEvent e) {
                 login1 fIngreso = new login1();
                 ControladorLogin controlador;
-                controlador = new ControladorLogin(configuracion.Datos.usuarios, fIngreso);
+                controlador = new ControladorLogin(main.ExFinal.trabajadores, PagPrincipal);
                 controlador.iniciar();
                 
                 vista.dispose();
