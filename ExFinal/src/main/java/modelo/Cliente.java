@@ -8,16 +8,16 @@ package modelo;
  *
  * @author airto
  */
-class Cliente extends Persona {
-    int celular;
-    float dinero;
+public class Cliente extends Persona {
+    private int celular;
+    private float dinero;
 
-    boolean pagar() {
+    public boolean pagar() {
    
         return true;
     }
 
-    boolean recargarDinero(float cantidad) {
+    public boolean recargarDinero(float cantidad) {
         this.dinero += cantidad;
         return true;
     }

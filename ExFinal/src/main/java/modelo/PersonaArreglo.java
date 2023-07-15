@@ -9,5 +9,17 @@ package modelo;
  * @author airto
  */
 public class PersonaArreglo {
+    private int indice;
+    private Persona[] personas;
     
+    public PersonaArreglo(int tamaño){
+        this.personas = new Persona[tamaño];
+        this.indice=0;   
+    
+    }
+    public void agregarPersona(Persona p) {
+        if(indice < personas.length) {
+            personas[indice++] = p;
+        }
+    }
 }

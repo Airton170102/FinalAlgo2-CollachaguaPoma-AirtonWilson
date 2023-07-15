@@ -9,5 +9,9 @@ package modelo;
  * @author airto
  */
 public class Detalle {
-    
+    private int cantidad;
+    private float precio;
+    private float descuento;
+    float total;
+    Producto producto;
 }

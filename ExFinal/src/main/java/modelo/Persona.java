@@ -11,21 +11,13 @@ import java.util.Date;
  * @author airto
  */
 public class Persona {
-    String nombre;
-    String paterno;
-    String materno;
-    Date nacimiento;
-    String numDocumento;
+    private String nombre;
+    private String paterno;
+    private String materno;
+    private Date nacimiento;
+    private String numDocumento;
 }
 
-class PersonaArreglo {
-    int indice;
-    Persona[] personas;
 
-    void agregarPersona(Persona p) {
-        if(indice < personas.length) {
-            personas[indice++] = p;
-        }
-    }
-}
     
+

@@ -8,23 +8,23 @@ package modelo;
  *
  * @author airto
  */
-class Trabajador extends Persona {
+public class Trabajador extends Persona {
     String password;
     String email;
 
-    boolean ingresar(String email, String password) {
+    public boolean ingresar(String email, String password) {
         if(this.email.equals(email) && this.password.equals(password)) {
             return true;
         }
         return false;
     }
 
-    boolean salir() {
+    public boolean salir() {
     
         return true;
     }
 
-    boolean crearVenta(Cliente c) {
+    public boolean crearVenta(Cliente c) {
      
         return true;
     }

@@ -8,18 +8,18 @@ package modelo;
  *
  * @author airto
  */
-public class VentaArreglo {
+public class CategoriaArreglo {
     private int indice;
-    private Venta[] ventas;
+    private Categoria[] categorias;
 
-    public VentaArreglo(int tamaño) {
-        this.ventas = new Venta[tamaño];
+    public CategoriaArreglo(int tamaño) {
+        this.categorias = new Categoria[tamaño];
         this.indice=0;
     }
 
-    public boolean registrarVenta(Venta v) {
-        if(indice < ventas.length) {
-            ventas[indice++] = v;
+    public boolean agregarCategoria(Categoria cat) {
+        if (indice < categorias.length) {
+            categorias[indice++] = cat;
             return true;
         }
         return false;
